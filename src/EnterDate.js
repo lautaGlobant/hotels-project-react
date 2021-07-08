@@ -1,10 +1,17 @@
+import "./EnterDate.css";
+
 function EnterDate(props) {
     return (
-        <div className="control has-icon">
-            <span className="icon">
-                <i className={"fas " + props.icon}></i>
-            </span>
-            <input type="date" onChange={(e) => props.handleDate(e.target.value)}/>
+        <div className="EnterDate field">
+            <div className="control has-icons-left">
+                <div className="input" style={ {width: '200px'} }>
+                    <input type="date" style={{border:"none"}} onChange={(e) => props.handleDate(e.target.value)}/>
+                </div>
+                
+                <div className="icon is-left">
+                    <i className={"fas " + props.icon}></i>
+                </div>
+            </div>
         </div>
     )
 }
