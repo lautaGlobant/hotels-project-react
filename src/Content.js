@@ -1,13 +1,13 @@
 import Hotel from './Hotel.js';
 
-function Content() {
+function Content(props) {
     return (
         <div className='Content'>
-            <Hotel />
-            <Hotel />
-            <Hotel />
-            <Hotel />
-            <Hotel />
+            <div className='columns' style={{overflowX:'scroll'}}>
+                {props.hotels.map((h) => {
+                    return (<div className='column'><Hotel hotel={h} /></div>)
+                })}
+            </div>
         </div>
     )
 }
