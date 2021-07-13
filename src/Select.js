@@ -5,7 +5,7 @@ function Select(props){
     <div className="field Select">
         <div className="control has-icons-left">
             <div className="select" style={ {width: '200px'} }>
-                <select >
+                <select onChange={(e) => props.handleSelect(e.target.value)}>
                     {props.list.map((l) => {
                         return <option key={l.name} value={l.value}>{l.name}</option>
                     })}
