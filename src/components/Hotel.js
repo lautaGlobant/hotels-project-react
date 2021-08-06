@@ -29,6 +29,9 @@ function Hotel(props) {
                 <p>{props.hotel.description}</p>
             </div>
         </div>
+        <div>
+            <button class="button is-success is-large is-fullwidth">Reservar</button>
+        </div>
     </div>
     )
 }
