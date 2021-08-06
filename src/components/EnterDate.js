@@ -5,7 +5,7 @@ function EnterDate(props) {
         <div className="EnterDate field">
             <div className="control has-icons-left">
                 <div className="input" style={ {width: '200px'} }>
-                    <input type="date" style={{border:"none"}} onChange={(e) => props.handleDate(e.target.value)}/>
+                    <input type="date" style={{border:"none"}} onChange={(e) => props.handleDate(new Date(e.target.value).valueOf()) }/>
                 </div>
                 
                 <div className="icon is-left">

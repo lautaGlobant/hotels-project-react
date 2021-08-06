@@ -3,8 +3,8 @@
 // Utilizamos fechas dinámicas para que la aplicación siempre muestre un rango de días entre la fecha actual y el futuro.
 
 const today = new Date()
-const hotelsData = [
-  {
+const data = {
+  hotels : [{
     slug: 'la-bamba-de-areco',
     name: 'La Bamba de Areco',
     photo: './images/la-bamba-de-areco.jpg',
@@ -220,4 +220,12 @@ const hotelsData = [
     country: 'Uruguay',
     price: 1
   }
-]
+],
+  filters : {
+    countries : [ {value:'Todo',name:'Todos los paises'}, {value:'Argentina',name:'Argentina'}, {value:'Chile',name:'Chile'}, {value:'Brasil',name:'Brasil'} ],
+    prices : [ {value:'Todo',name:'Cualquier precio'},{value:4,name:'Mas caro'},{value:3,name:'Caro'},{value:2,name:'Economico'},{value:1,name:'Barato'} ],
+    sizes : [ {value:'Todo',name:'Todos los tamaños'},{value:10,name:'Hotel chico'},{value:20,name:'Hotel mediano'},{value:30,name:'Hotel grande'} ]
+}
+}
+
+export default data;

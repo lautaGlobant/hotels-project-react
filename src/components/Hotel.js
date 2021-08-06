@@ -14,7 +14,7 @@ function Hotel(props) {
         </div>
         <div className="card-image">
             <figure className="image is-4by3">
-                <img src={props.hotel.photo} alt="Placeholder image" />
+                <img src={props.hotel.photo} alt={props.hotel.name} />
             </figure>
             <div className='details'>
                 <div className="icon has-icon-left rooms" style={{marginLeft:'1.5rem'}}>
